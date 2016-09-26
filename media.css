@@ -2,6 +2,7 @@
     width:100%;
     background: lightskyblue;
     height: 75px;
+    margin-bottom: 20px;
 }
 
 .HAM {
@@ -13,14 +14,52 @@
 
 .header ul {
     display: none;
-    float: right;
+    align-self: flex-end;
 }
 
 .header ul li {
     color: #fff;
     font-size: 18px;
     text-transform: uppercase;
-
 }
 
+.block {
+  width: 100%;
+  height: 300px;
+  background: lightgray;
+  margin-bottom: 20px;
+}
 
+@media (min-width: 750px){
+  .main-wrapper {
+    display: flex;
+    flex-wrap: wrap; /*wrap to next row*/
+    justify-content: space-around;
+  }
+
+  .block {
+    width: 45%;
+  }
+
+  .HAM {
+    display: none;
+  }
+
+  .header ul {
+    display:flex;
+  }
+}
+
+@media (min-width: 900px) {
+  .block {
+    width: 25%;
+  }
+
+  .block:nth-child(even) {
+    background: lightskyblue;
+  }
+
+  .block:nth-child(odd) {
+    background: lightcoral;
+  }
+}
